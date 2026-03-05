@@ -1,0 +1,302 @@
+/* ===== RESET E ESTILOS GLOBAIS ===== */
+/* Remove margens e paddings padrão, define box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== VARIÁVEIS DE COR (você pediu verde e branco) ===== */
+:root {
+    --verde-escuro: #2e7d32;    /* Verde mais escuro para títulos */
+    --verde-claro: #4caf50;     /* Verde médio para botões/destaques */
+    --verde-muito-claro: #e8f5e9; /* Fundo verde bem clarinho */
+    --branco: #ffffff;          /* Branco puro */
+    --cinza: #f5f5f5;           /* Cinza clarinho para fundos alternados */
+    --texto: #333333;           /* Cor do texto principal (quase preto) */
+}
+
+/* ===== ESTILOS BASE ===== */
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte bonita e moderna */
+    color: var(--texto);
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+/* ===== MENU ===== */
+.menu {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    padding: 1rem 2rem;
+    position: fixed; /* Menu fixo no topo */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Fica acima de tudo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+}
+
+/* Lista do menu */
+.menu-lista {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.menu-lista a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s; /* Transição suave */
+}
+
+.menu-lista a:hover {
+    color: var(--verde-muito-claro);
+}
+
+/* Menu hamburguer (escondido em telas grandes) */
+.menu-hamburguer {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-hamburguer span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--branco);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* ===== SEÇÕES ===== */
+.section {
+    padding: 80px 20px; /* Espaçamento interno */
+    min-height: 100vh; /* Mínimo de altura = 100% da tela */
+    display: flex;
+    align-items: center;
+}
+
+/* Alterna fundos entre branco e cinza */
+.section:nth-child(even) {
+    background-color: var(--cinza);
+}
+
+.section:nth-child(odd) {
+    background-color: var(--branco);
+}
+
+.container {
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto;    /* Centraliza */
+    width: 100%;
+}
+
+/* ===== TÍTULOS ===== */
+h2 {
+    font-size: 2.5rem;
+    color: var(--verde-escuro);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+h3 {
+    color: var(--verde-escuro);
+    margin-bottom: 1rem;
+}
+
+/* ===== CARDS ===== */
+.card {
+    background-color: var(--branco);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    height: 100%;
+    transition: transform 0.3s; /* Efeito ao passar mouse */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Levanta o card */
+}
+
+/* Grid de 3 colunas */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* ===== ELEMENTOS ESPECÍFICOS ===== */
+.hero {
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    color: var(--verde-escuro);
+    margin-bottom: 2rem;
+}
+
+.destaque {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--verde-escuro);
+    margin: 2rem 0;
+}
+
+/* Botão */
+.btn {
+    background-color: var(--verde-claro);
+    color: var(--branco);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: var(--verde-escuro);
+}
+
+/* Mensagem oculta (JavaScript) */
+.mensagem-oculta {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--verde-muito-claro);
+    border-radius: 5px;
+    display: none;
+    font-weight: 600;
+}
+
+.mensagem-oculta.visivel {
+    display: block;
+}
+
+/* Citação */
+blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--verde-escuro);
+    border-left: 4px solid var(--verde-claro);
+    padding-left: 1rem;
+    margin: 1rem 0;
+}
+
+/* Destaque no texto */
+.destaque-texto {
+    color: var(--verde-escuro);
+    font-weight: 700;
+}
+
+/* Desafio */
+.desafio-pergunta {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--verde-escuro);
+}
+
+/* Citação da tecnologia */
+.citacao {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: var(--verde-muito-claro);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Conclusão */
+.conclusao-frase {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--verde-escuro);
+    text-align: center;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 2rem;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+/* Tablet */
+@media (max-width: 768px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu-lista {
+        display: none; /* Esconde menu normal */
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--verde-escuro);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        gap: 1rem;
+    }
+    
+    /* Mostra menu quando ativo */
+    .menu-lista.ativo {
+        display: flex;
+    }
+    
+    .menu-hamburguer {
+        display: flex; /* Mostra hamburguer */
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .hero h3 {
+        font-size: 1.5rem;
+    }
+    
+    .conclusao-frase {
+        font-size: 1.5rem;
+    }
+}

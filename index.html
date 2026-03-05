@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuro Sustentável - Paraná</title>
+    
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Fonte Google (opcional, mas deixa mais bonito) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- CABEÇALHO COM MENU (Slide 1) -->
+    <header>
+        <nav class="menu">
+            <div class="logo">
+                <h1>🌱 Futuro Sustentável</h1>
+            </div>
+            <!-- Menu hamburguer para mobile (controlado por JS) -->
+            <div class="menu-hamburguer" id="menu-hamburguer">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu-lista" id="menu-lista">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#contexto">Contexto</a></li>
+                <li><a href="#desafio">Desafio</a></li>
+                <li><a href="#producao">Produção x Poluição</a></li>
+                <li><a href="#praticas">Boas Práticas</a></li>
+                <li><a href="#tecnologia">Tecnologia</a></li>
+                <li><a href="#conclusao">Conclusão</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <!-- SEÇÃO INÍCIO (Slide 1) -->
+        <section id="inicio" class="section hero">
+            <div class="container">
+                <h2>FUTURO SUSTENTÁVEL</h2>
+                <h3>Equilíbrio entre produção e meio ambiente</h3>
+                <p class="subtitulo">Como produzir mais, poluir menos e respeitar o trabalhador</p>
+                <p class="destaque">O CENÁRIO PARANAENSE</p>
+                <!-- Botão interativo (JavaScript) -->
+                <button id="botao-saiba-mais" class="btn">Saiba mais sobre o Paraná 🌿</button>
+                <p id="mensagem-parana" class="mensagem-oculta"></p>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CONTEXTO (Slide 2) -->
+        <section id="contexto" class="section">
+            <div class="container">
+                <h2>Contexto</h2>
+                <div class="card">
+                    <p>O Paraná é <span class="destaque-texto">líder em produção agrícola</span> e possui um <span class="destaque-texto">setor industrial forte</span>.</p>
+                    <blockquote>
+                        "Produzir com responsabilidade é a única forma de garantir o amanhã."
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DESAFIO (Slide 3) -->
+        <section id="desafio" class="section">
+            <div class="container">
+                <h2>O Desafio</h2>
+                <div class="card">
+                    <p class="desafio-pergunta">Como manter o crescimento econômico sem esgotar os recursos naturais?</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO PRODUÇÃO X POLUIÇÃO (Slide 4) -->
+        <section id="producao" class="section">
+            <div class="container">
+                <h2>PRODUÇÃO X POLUIÇÃO</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>Redução de Impacto</h3>
+                        <p>Substituição de combustíveis fósseis por <strong>biogás</strong> (comum no interior do PR) e <strong>energia solar</strong>.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Tecnologia</h3>
+                        <p>Uso de <strong>agricultura de precisão</strong> para evitar desperdício de defensivos agrícolas e água.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Meta</h3>
+                        <p>Produzir mais por hectare, reduzindo a <strong>pegada de carbono</strong>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO BOAS PRÁTICAS (Slide 5) -->
+        <section id="praticas" class="section">
+            <div class="container">
+                <h2>BOAS PRÁTICAS NO PARANÁ</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>⚡ Energia Limpa</h3>
+                        <p>Biodigestores em granjas de suínos no Oeste do estado para gerar energia.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🔄 Logística Reversa</h3>
+                        <p>Cooperativas de reciclagem e sistema de devolução de embalagens de agrotóxicos (referência nacional).</p>
+                    </div>
+                    <div class="card">
+                        <h3>🌳 Preservação</h3>
+                        <p>Reservas Particulares do Patrimônio Natural (RPPNs) ao lado de áreas produtivas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO TECNOLOGIA (Slide 6) -->
+        <section id="tecnologia" class="section">
+            <div class="container">
+                <h2>O PAPEL DA TECNOLOGIA</h2>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>🤖 Automação Inteligente</h3>
+                        <p>Sensores que evitam vazamento de resíduos químicos.</p>
+                    </div>
+                    <div class="card">
+                        <h3>💧 Economia Circular</h3>
+                        <p>Reuso da água no processo industrial.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🛸 Monitoramento</h3>
+                        <p>Uso de drones para fiscalizar áreas de preservação permanente (APPs).</p>
+                    </div>
+                </div>
+                <div class="citacao">
+                    <p>O equilíbrio é possível: produção e meio ambiente não são inimigos; a tecnologia e o respeito às leis são a ponte entre eles.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO CONCLUSÃO (Slide 7) -->
+        <section id="conclusao" class="section">
+            <div class="container">
+                <h2>CONCLUSÃO</h2>
+                <div class="card conclusao-card">
+                    <p class="conclusao-frase">"O PARANÁ DO FUTURO É VERDE, PRODUTIVO E JUSTO."</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>© 2024 - Futuro Sustentável - Trabalho Escolar</p>
+    </footer>
+
+    <!-- Link para o JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
